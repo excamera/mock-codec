@@ -1,0 +1,8 @@
+#!/bin/sh -xe
+
+# encode: convert raw video (yuv4mpegpipe) on stdin to VP8 on stdout
+
+# use the default settings in ffmpeg's VP8 encoder (libvpx)
+
+RAW_VIDEO='-f yuv4mpegpipe -codec:video rawvideo'
+exec ffmpeg $RAW_VIDEO -i - -f ivf -codec:video libvpx -

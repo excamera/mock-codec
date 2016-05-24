@@ -1,0 +1,8 @@
+#!/bin/sh -e
+
+# decode: convert VP8 video on stdin to raw video (yuv4mpegpipe) on stdout
+
+# input format must be VP8 (IVF)
+
+RAW_VIDEO='-f yuv4mpegpipe -codec:video rawvideo -pix_fmt yuv420p'
+exec ffmpeg -f ivf -codec:video libvpx -i - $RAW_VIDEO -

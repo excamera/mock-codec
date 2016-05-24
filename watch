@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# watch: play raw video (yuv4mpegpipe) from stdin on X display
+
+RAW_VIDEO='-f yuv4mpegpipe -codec:video rawvideo'
+exec ffplay $RAW_VIDEO -autoexit -

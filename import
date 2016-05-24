@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# import: convert video in arbitrary format on stdin
+#         to raw video (yuv4mpegpipe) on stdout
+
+RAW_VIDEO='-f yuv4mpegpipe -codec:video rawvideo -pix_fmt yuv420p'
+exec ffmpeg -i - $RAW_VIDEO -
