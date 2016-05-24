@@ -24,4 +24,4 @@ Mock implementations of the Alfalfa coder/decoder, built with ffmpeg.
 
      Example: `./watch <example.y4m`
 
-   * `example.vp8`: sample VP8 (IVF) file for testing
+   * `example.vp8`, `example2.vp8`, `example3.vp8`: sample VP8 (IVF) files for testing
